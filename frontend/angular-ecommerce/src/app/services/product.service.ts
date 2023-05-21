@@ -11,7 +11,9 @@ private baseUrl ='http://localhost:8080/api/products'
   constructor(private httpClient:HttpClient) { }
 
   // map the JSON data from Spring Data REST to Product array
-  getProductList(): Observable<Product[]>{
+  getProductList(theCategoryOd: number): Observable<Product[]>{
+
+  // @TODO: need to build URL based on category id .. will come back to this!
   return this.httpClient.get<GetResponse>(this.baseUrl).pipe(
     map(response => response._embedded.products)
   )
