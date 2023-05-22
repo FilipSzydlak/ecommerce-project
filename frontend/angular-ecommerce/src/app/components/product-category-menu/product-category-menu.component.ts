@@ -3,7 +3,7 @@ import {ProductCategory} from "../../common/product-category";
 import {ProductService} from "../../services/product.service";
 
 @Component({
-  selector: 'app-products-category-menu',
+  selector: 'app-product-category-menu',
   templateUrl: './product-category-menu.component.html',
   styleUrls: ['./product-category-menu.component.css']
 })

@@ -9,7 +9,7 @@ import {ProductCategory} from "../common/product-category";
 })
 export class ProductService {
 private baseUrl ='http://localhost:8080/api/products';
-private categoryUrl = 'http://localhost:8080/api/products-category';
+private categoryUrl = 'http://localhost:8080/api/product-category';
   constructor(private httpClient:HttpClient) { }
 
   // map the JSON data from Spring Data REST to Product array
