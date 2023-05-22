@@ -43,7 +43,7 @@ export class ProductListComponent {
       data => {
         this.products = data;
       }
-    )
+    );
   }
   handleListProducts() {
     //check if "id" parameter is available
