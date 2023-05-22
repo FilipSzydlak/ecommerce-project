@@ -4,10 +4,10 @@ import {ProductService} from "../../services/product.service";
 
 @Component({
   selector: 'app-products-category-menu',
-  templateUrl: './products-category-menu.component.html',
-  styleUrls: ['./products-category-menu.component.css']
+  templateUrl: './product-category-menu.component.html',
+  styleUrls: ['./product-category-menu.component.css']
 })
-export class ProductsCategoryMenuComponent {
+export class ProductCategoryMenuComponent {
 
   productCategories: ProductCategory[] =[];
 
@@ -20,7 +20,7 @@ export class ProductsCategoryMenuComponent {
 
   listProductCategories(){
 
-    this.productService.getProductCategories().subscribe(
+    this.ProductService.getProductCategories().subscribe(
       data => {
         console.log('Product categories=' + JSON.stringify(data))
         this.productCategories = data;

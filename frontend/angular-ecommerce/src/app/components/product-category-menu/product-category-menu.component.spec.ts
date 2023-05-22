@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductsCategoryMenuComponent } from './products-category-menu.component';
+import { ProductCategoryMenuComponent } from './product-category-menu.component';
 
 describe('ProductsCategoryMenuComponent', () => {
-  let component: ProductsCategoryMenuComponent;
-  let fixture: ComponentFixture<ProductsCategoryMenuComponent>;
+  let component: ProductCategoryMenuComponent;
+  let fixture: ComponentFixture<ProductCategoryMenuComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ProductsCategoryMenuComponent]
+      declarations: [ProductCategoryMenuComponent]
     });
-    fixture = TestBed.createComponent(ProductsCategoryMenuComponent);
+    fixture = TestBed.createComponent(ProductCategoryMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
