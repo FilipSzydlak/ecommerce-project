@@ -26,7 +26,7 @@ private categoryUrl = 'http://localhost:8080/api/product-category';
 
   // need to build URL based on category id, page and size
     const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`
-                    + `page=${thePage}&size=${thePageSize}`;
+                    + `&page=${thePage}&size=${thePageSize}`;
 
     return this.httpClient.get<GetResponseProducts>(searchUrl);
   }
