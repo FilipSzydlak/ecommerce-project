@@ -20,9 +20,20 @@ private categoryUrl = 'http://localhost:8080/api/product-category';
     return this.httpClient.get<Product>(productUrl);
   }
   // map the JSON data from Spring Data REST to Product array
+  getProductListPaginate(thePage: number,
+                         thePageSize:number,
+                         theCategoryId: number): Observable<GetResponseProducts>{
+
+  // need to build URL based on category id, page and size
+    const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`
+                    + `page=${thePage}&size=${thePageSize}`;
+
+    return this.httpClient.get<GetResponseProducts>(searchUrl);
+  }
+
   getProductList(theCategoryId: number): Observable<Product[]>{
 
-  // need to build URL based on category id .. will come back to this!
+    // need to build URL based on category id .. will come back to this!
     const searchUrl = `${this.baseUrl}/search/findByCategoryId?id=${theCategoryId}`
 
     return this.getProducts(searchUrl);
@@ -49,6 +60,12 @@ private categoryUrl = 'http://localhost:8080/api/product-category';
 interface GetResponseProducts{
   _embedded:{
     products: Product[];
+  },
+  page:{
+    size: number,
+    totalElements: number,
+    totalPages: number,
+    number: number
   }
 }
 
