@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit{
 
   product!: Product;
 
