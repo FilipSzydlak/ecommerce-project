@@ -47,7 +47,7 @@ private categoryUrl = 'http://localhost:8080/api/product-category';
 
   searchProductsPaginate(thePage: number,
                          thePageSize:number,
-                         theKeyword: number): Observable<GetResponseProducts>{
+                         theKeyword: string): Observable<GetResponseProducts>{
 
     // need to build URL based on category keyword, page and size
     const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`
